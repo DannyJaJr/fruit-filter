@@ -24,7 +24,7 @@ class FruitContainer extends Component {
                 return true;
 
             }
-            
+
         })
         this.setState({
             fruitsToDisplay: filteredFruitList,
@@ -38,7 +38,7 @@ class FruitContainer extends Component {
     render() {
         return (
             <div>
-                <Input value={this.state.fruitValue} onChange={this.handleFilterChange} />
+                <Input fruitInput={this.state.fruitValue} filter={this.handleFilterChange} />
                 <List fruits={this.state.fruitsToDisplay} />
             </div>
         )
